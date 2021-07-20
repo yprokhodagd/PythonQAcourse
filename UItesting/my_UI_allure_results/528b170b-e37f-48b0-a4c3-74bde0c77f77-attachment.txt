@@ -1,0 +1,6 @@
+FEATURED POST
+Kirill Evstigneev
+Nov 17, 2020 • 9 min read
+Istio Service Mesh Beyond Kubernetes
+Istio service mesh promises a seamless migration to microservices. But Istio doesn't extend outside of Kubernetes very well. The working service mesh options for both Kubernetes and VMs are limited. However, there's a few cloud migration tactics that can be used to deal with the Istio shortcomings....
+Learn more 

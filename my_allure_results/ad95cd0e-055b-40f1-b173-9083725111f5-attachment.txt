@@ -1,0 +1,8 @@
+{
+    "type": "Science",
+    "title": "Title1",
+    "id": "f536b5aa-e9f0-4a4a-9e95-753097a8d58d",
+    "creation_date": "2021-01-01",
+    "updated_date_time": "2021-06-14T21:07:49.549968"
+}
+
