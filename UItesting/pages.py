@@ -54,7 +54,7 @@ class ContactUsPage(BasePage):
     def check_contact_button_is_disabled(self):
         ba = BaseActions(self.driver)
         button = ba.wait_till_element_is_visible(*self.CONTACT_BTN)
-        button.click()
+        assert button.is_enabled()
 
 
 class AboutPage(BasePage):

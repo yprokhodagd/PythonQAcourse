@@ -1,5 +1,6 @@
 from time import sleep
-
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from UItesting.pages import HomePage, AboutPage, ContactUsPage
 from UItesting.actions import BaseActions
@@ -7,8 +8,6 @@ from UItesting.actions import BaseActions
 
 class Test1:
     def setup(self):
-        from selenium import webdriver
-        from selenium.webdriver.chrome.options import Options
         chrome_options = Options()
         # chrome_options.add_experimental_option("detach", True)  # Chrome stays opened
         chrome_options.add_argument("--window-size=1920,1080")

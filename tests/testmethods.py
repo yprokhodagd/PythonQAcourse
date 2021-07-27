@@ -60,13 +60,3 @@ def update_book(id, type, title):
     data = json.dumps(payload)
     x = requests.put(url, data=data, headers=headers)  #, headers=headers)
     return x.text
-
-
-if __name__ == "__main__":
-    pass
-    # print(test_get_book_by_type())
-    # pprint(test_get_book_by_id("ce0372e8-90df-45fc-85c4-5db1b1c02549"))
-    # print(test_delete_book(book_id="9884bb39-eeea-477d-8297-500c3f708588"))
-    # print(add_book(book_type='Science', title='title', creation_date='2021-01-02'))
-    # print(test_update_book(book_id="599d13b2-0897-443e-8aec-630cc0a1beaa", type='Science', title='title111',))
-    pprint(get_book_latest(10))

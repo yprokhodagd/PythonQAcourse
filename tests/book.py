@@ -12,7 +12,3 @@ class Book:
 
     def date(self):
         return self.date
-
-
-# b = Book('Sc', 'tt', 'date')
-# print(b.type)

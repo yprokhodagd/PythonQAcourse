@@ -14,9 +14,9 @@ def test_add_book(book):
     res = add_book(book.type, book.title, book.date)
     print(res)
     res = json.loads(res)
-    assert res['title'] == book.title
-    assert res['type'] == book.type
-    assert res['creation_date'] == book.date
+    assert res['title'] == book.title, "should be equal"
+    assert res['type'] == book.type, "should be equal"
+    assert res['creation_date'] == book.date, "should be equal"
 
 
 @pytest.mark.parametrize('book', [book1, book2])
@@ -27,9 +27,9 @@ def test_delete_book(book):
 
     res = delete_book(id=res_add_id)
     res = json.loads(res)
-    assert res['title'] == book.title
-    assert res['type'] == book.type
-    assert res['creation_date'] == book.date
+    assert res['title'] == book.title, "should be equal"
+    assert res['type'] == book.type, "should be equal"
+    assert res['creation_date'] == book.date, "should be equal"
 
 
 @pytest.mark.parametrize('book', [book1, book2])
@@ -43,10 +43,10 @@ def test_update_book(book):
     res = update_book(id=res_add_id, type=changed_type, title=changed_title)
     res = json.loads(res)
 
-    assert res['id'] == res_add_id
-    assert res['type'] == changed_type
-    assert res['title'] == changed_title
-    assert res['creation_date'] == book.date
+    assert res['id'] == res_add_id, "should be equal"
+    assert res['type'] == changed_type, "should be equal"
+    assert res['title'] == changed_title, "should be equal"
+    assert res['creation_date'] == book.date, "should be equal"
 
 
 @pytest.mark.parametrize('book', [book1, book2])
@@ -54,9 +54,9 @@ def test_get_book_by_type(book):
     add_book(book.type, book.title, book.date)
     res = get_book_by_type(type=book.type)
     res = json.loads(res)
-    assert res[-1]['title'] == book.title
-    assert res[-1]['type'] == book.type
-    assert res[-1]['creation_date'] == book.date
+    assert res[-1]['title'] == book.title, "should be equal"
+    assert res[-1]['type'] == book.type, "should be equal"
+    assert res[-1]['creation_date'] == book.date, "should be equal"
 
 
 @pytest.mark.parametrize('book', [book1, book2])
@@ -68,9 +68,9 @@ def test_get_book_by_id(book):
     res = get_book_by_id(id=res_add_id)
     res = json.loads(res)
 
-    assert res['title'] == book.title
-    assert res['type'] == book.type
-    assert res['creation_date'] == book.date
+    assert res['title'] == book.title, "should be equal"
+    assert res['type'] == book.type, "should be equal"
+    assert res['creation_date'] == book.date, "should be equal"
 
 
 def test_get_book_latest():
@@ -81,14 +81,10 @@ def test_get_book_latest():
     res = json.loads(res)
     pprint(res)
 
-    assert res[0]['title'] == book2.title
-    assert res[0]['type'] == book2.type
-    assert res[0]['creation_date'] == book2.date
+    assert res[0]['title'] == book2.title, "should be equal"
+    assert res[0]['type'] == book2.type, "should be equal"
+    assert res[0]['creation_date'] == book2.date, "should be equal"
 
-    assert res[1]['title'] == book1.title
-    assert res[1]['type'] == book1.type
-    assert res[1]['creation_date'] == book1.date
-
-
-if __name__ == "__main__":
-    pass
+    assert res[1]['title'] == book1.title, "should be equal"
+    assert res[1]['type'] == book1.type, "should be equal"
+    assert res[1]['creation_date'] == book1.date, "should be equal"
